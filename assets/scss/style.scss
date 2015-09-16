@@ -1,0 +1,88 @@
+@mixin flexbox() {
+    display: -ms-flexbox;
+    display: -webkit-flexbox;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+}
+
+@mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex: $values;
+    -webkit-flex: $values;
+    -ms-flex: $values;
+    flex: $values;
+}
+@mixin flexdirection($value) {
+    -webkit-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
+@mixin justifycontent ($val) {
+    -webkit-box-pack: $val;
+    -moz-box-pack: $val;
+    -ms-flex-pack: $val;
+    -webkit-justify-content: $val;
+    justify-content: $val;
+
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: #ccc;
+
+    &:hover {
+        color: #000;
+    }
+}
+.site-container {
+    @include flexbox();
+    @include flexdirection(row);
+    flex-wrap: wrap;
+    @include justifycontent(flex-start);
+    height: 100vh;
+
+    .site-header {
+        @include flexbox();
+        @include justifycontent(center);
+        @include flex(100%);
+
+        .header-logo {
+        }
+    }
+
+    .fancy {
+        @include flex(100%);
+    }
+    
+    #filters {
+        @include flexbox();
+        @include justifycontent(center);
+        @include flexdirection(row);
+        @include flex(100%);
+
+        a {
+            display: inline-block;
+            margin: 0 auto;
+        }
+    }
+    
+    #menuList {
+        @include flexbox();
+        @include flex(100%);
+    }
+
+    footer {
+        @include flexbox();
+        @include flex(100%);
+    }
+
+}
