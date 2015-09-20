@@ -4,7 +4,7 @@ define([
 
     var Menu = class Menu {
         constructor() {
-            console.log(arguments);
+            //console.log(arguments);
         }
         //get the elements from the DOM that will handle the events
         getEls () {

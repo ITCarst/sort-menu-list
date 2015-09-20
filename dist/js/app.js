@@ -9,9 +9,8 @@ define(["menuData"], function (data) {
     var Menu = (function () {
         function Menu() {
             _classCallCheck(this, Menu);
-
-            console.log(arguments);
         }
+        //console.log(arguments);
 
         //get the elements from the DOM that will handle the events
 
