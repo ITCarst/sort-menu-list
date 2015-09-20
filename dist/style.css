@@ -24,8 +24,7 @@ a {
   -moz-box-pack: flex-start;
   -ms-flex-pack: flex-start;
   -webkit-justify-content: flex-start;
-  justify-content: flex-start;
-  height: 100vh; }
+  justify-content: flex-start; }
   .site-container .site-header {
     display: -ms-flexbox;
     display: -webkit-flexbox;

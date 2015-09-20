@@ -48,7 +48,8 @@ a {
     @include flexdirection(row);
     flex-wrap: wrap;
     @include justifycontent(flex-start);
-    height: 100vh;
+    //height: 100vh;
+
 
     .site-header {
         @include flexbox();

@@ -1,36 +1,35 @@
 // Karma configuration
-// Generated on Wed Sep 16 2015 14:03:28 GMT+0200 (CEST)
+// Generated on Sun Sep 20 2015 12:33:43 GMT+0200 (CEST)
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
-
+    basePath: './',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine', 'requirejs', "sinon"],
 
-
     // list of files / patterns to load in the browser
     files: [
-      {pattern: "assets/js/**/*.js", include: false},
+      {pattern: 'assets/js/**/*.js', included: false},
+      {pattern: 'test/*.test.js', included: false},
 
       'test/test-main.js'
     ],
 
-
     // list of files to exclude
     exclude: [
         "assets/js/main.js",
-        "assets/js/libs/**/*.js"       
+        "assets/js/libs/**/*.js"
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        "assets/js/**/*.js" : ["babel"],
+        "test/**/*.test.js" : ["babel"]
     },
 
 
