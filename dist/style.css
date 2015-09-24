@@ -70,16 +70,7 @@ a {
       display: inline-block;
       margin: 0 auto; }
   .site-container #menuList {
-    display: -ms-flexbox;
-    display: -webkit-flexbox;
-    display: -webkit-box;
-    display: -moz-box;
-    display: flex;
-    -webkit-box-flex: 100%;
-    -moz-box-flex: 100%;
-    -webkit-flex: 100%;
-    -ms-flex: 100%;
-    flex: 100%; }
+    list-style: none; }
   .site-container footer {
     display: -ms-flexbox;
     display: -webkit-flexbox;

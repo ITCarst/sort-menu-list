@@ -1,13 +1,20 @@
 "use strict";
 
 require.config({
-    "baseUrl": "dist/js",
+    baseUrl: "dist/js",
     paths: {
+        text: "libs/text",
+        underscore: "libs/underscore.min",
+        menu: "app",
+        menuModel: "app.model",
         menuData: "menu.data",
-        text: "libs/text"
+        menuView: "app.view"
     }
 });
 
-require(["app"], function (App) {
-    var app = new App();
+require(["menuView"], function (MenuView) {
+
+    var menu = new MenuView();
+    //render the view
+    menu.render();
 });

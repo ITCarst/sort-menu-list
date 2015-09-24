@@ -17,9 +17,12 @@ require.config({
     // Karma serves files under /base, which is the basePath from your config file
     baseUrl: '/base',
     paths: {
-        app: "/base/assets/js/app",
-        menuData: "/base/assets/js/menu.data"
-
+        text: "assets/js/libs/text",
+        underscore: "assets/js/libs/underscore.min",
+        menu: "assets/js/app",
+        menuData: "assets/js/menu.data",
+        menuModel: "assets/js/app.model",
+        menuView: "assets/js/app.view"
     },
     // dynamically load all test files
     deps: allTestFiles,

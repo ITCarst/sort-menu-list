@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: './',
+    basePath: '',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -22,7 +22,7 @@ module.exports = function(config) {
     // list of files to exclude
     exclude: [
         "assets/js/main.js",
-        "assets/js/libs/**/*.js"
+        "assets/js/libs/require.min.js"
     ],
 
     // preprocess matching files before serving them to the browser

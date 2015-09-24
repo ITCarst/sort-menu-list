@@ -1,15 +1,23 @@
 require.config({
-    "baseUrl" : "dist/js",
+    baseUrl : "dist/js",
     paths: {
+        text: "libs/text",
+        underscore: "libs/underscore.min",
+        menu : "app",
+        menuModel: "app.model",
         menuData : "menu.data",
-        text: "libs/text"
+        menuView: "app.view"
     }
 });
 
 require([
-    "app"
-], function (App) {
-    let app = new App();
+    "menuView"
+], function (MenuView) {
+    
+    let menu = new MenuView();
+    //render the view
+    menu.render();
+
 });
 
 

@@ -27,7 +27,7 @@ gulp.task("sass", function () {
 gulp.task("test", function (done) {
     karma.start({
         configFile: __dirname + "/karma.conf.js",
-        singleRun: true
+        singleRun: false
     }, function (exitCode) {
         done(exitCode ? "There are failing tests" : undefined);
     }); 
@@ -38,7 +38,7 @@ gulp.task("autotest", function () {
 });
 
 gulp.task("babel", function () {
-    return gulp.src("assets/js/**/*.js")
+    return gulp.src(["!assets/js/libs/underscore.min.js", "assets/js/**/*.js", "assets/js/tempaltes/**/*.html"])
         .pipe(babel())
         .pipe(gulp.dest("dist/js"));
 });

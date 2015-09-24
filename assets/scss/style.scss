@@ -77,8 +77,9 @@ a {
     }
     
     #menuList {
-        @include flexbox();
-        @include flex(100%);
+        //@include flexbox();
+        //@include flex(100%);
+        list-style: none;
     }
 
     footer {

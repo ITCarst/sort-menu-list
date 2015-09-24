@@ -1,16 +1,9 @@
-define([
-   "menuData"
-], function (data) {
+define(function () {
 
-    var Menu = class Menu {
+    //main Menu class Model
+    class Menu {
         constructor() {
-            //console.log(arguments);
-        }
-        //get the elements from the DOM that will handle the events
-        getEls () {
-        }
-        //eventListener for the buttons to trigger the switch
-        triggerSwitch () {
+            this.args = arguments;
         }
     };
 

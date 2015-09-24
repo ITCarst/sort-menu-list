@@ -1,7 +1,7 @@
 define(function () {
     //return the object with data
-    var m = function () {
-        var menus = [
+    let m = function () {
+        let menus = [
             {"name": "Fresh Squeezed Orange Juice", "type": "breakfast", "descr": "fresh orange juice", "price": 6.5},
             {"name": "Honey Almond Granola with Fruit", "type": "breakfast", "descr": "Natural cereal of honey toasted oats, raisins, almonds and dates", "price": 6.5},
             {"name": "Eggs Benedict", "type": "brakefast", "descr": "Poached eggs on toasted English muffin with Canadian bacon and Hollandaise sauce, Batter Home Fries", "price": 11.00},
