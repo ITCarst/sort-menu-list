@@ -33,6 +33,15 @@ gulp.task("test", function (done) {
     }); 
 });
 
+gulp.task("testOnce", function (done) {
+    karma.start({
+        configFile: __dirname + "/karma.conf.js",
+        singleRun: true
+    }, function (exitCode) {
+        done(exitCode ? "There are failing tests" : undefined);
+    });
+});
+
 gulp.task("autotest", function () {
     gulp.start("test");
 });
@@ -49,7 +58,7 @@ gulp.task("copy-template", function () {
 });
 
 gulp.task("default", function () {
-    gulp.start("sass", "copy-template", "lint", "babel", "test");
+    gulp.start("sass", "copy-template", "lint", "babel", "testOnce");
 });
 
 gulp.task("watch", function () {
