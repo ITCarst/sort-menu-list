@@ -27,7 +27,7 @@ gulp.task("sass", function () {
 gulp.task("test", function (done) {
     karma.start({
         configFile: __dirname + "/karma.conf.js",
-        singleRun: true
+        singleRun: false
     }, function (exitCode) {
         done(exitCode ? "There are failing tests" : undefined);
     }); 
@@ -38,21 +38,26 @@ gulp.task("autotest", function () {
 });
 
 gulp.task("babel", function () {
-    return gulp.src(["!assets/js/libs/underscore.min.js", "assets/js/**/*.js", "assets/js/tempaltes/**/*.html"])
+    return gulp.src(["!assets/js/libs/underscore.min.js", "assets/js/**/*.js", "assets/js/tempaltes/tmpl.html"])
         .pipe(babel())
         .pipe(gulp.dest("dist/js"));
 });
 
+gulp.task("copy-template", function () {
+    return gulp.src("assets/js/templates/tmpl.html")
+        .pipe(gulp.dest("dist/js/templates/"));
+});
+
 gulp.task("default", function () {
-    gulp.start("sass", "lint", "babel", "test");
+    gulp.start("sass", "copy-template", "lint", "babel", "test");
 });
 
 gulp.task("watch", function () {
     gulp.watch("assets/scss/**/*.scss", ["sass"]);
     gulp.watch("assets/js/**/*.js", ["babel"]);
+    gulp.watch("assets/js/templates/*.html", ["copy-template"]);
     gulp.watch("test/**/*.js", ["autotest"]);
 });
-
 
 
 

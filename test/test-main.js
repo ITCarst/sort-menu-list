@@ -22,7 +22,8 @@ require.config({
         menu: "assets/js/app",
         menuData: "assets/js/menu.data",
         menuModel: "assets/js/app.model",
-        menuView: "assets/js/app.view"
+        menuView: "assets/js/app.view",
+        menuTmpl: "text!templates/tmpl.html"
     },
     // dynamically load all test files
     deps: allTestFiles,
